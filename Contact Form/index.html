@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <div class="alert" style="display: none">
+      <i class="fa-regular fa-circle-check"
+        ><span class="msg">Message Sent!</span></i
+      >
+
+      <h4>Thanks for completing the form. We'll be in touch soon!</h4>
+    </div>
+    <!--end alert-->
+
+    <div id="form-container">
+      <div class="form-box">
+        <h1>Contact Us</h1>
+        <form action="#" name="forms" id="form">
+          <div class="input-group">
+            <div class="row">
+              <div class="form-control name">
+                <label for="name">First Name *</label>
+                <input type="text" id="name" class="change" />
+                <p id="nameError" class="error"></p>
+              </div>
+              <div class="form-control name">
+                <label for="last_name" class="last">Last Name *</label>
+                <input type="text" id="last_name" class="change" />
+                <p id="lastnameError" class="error"></p>
+              </div>
+            </div>
+            <!--end row-->
+
+            <div class="form-control">
+              <label for="email">Email Address *</label>
+              <input type="text" id="email" class="change" />
+              <p id="emailError" class="error"></p>
+            </div>
+
+            <div class="form-control">
+              <p>Query Type *</p>
+              <div class="inline">
+                <div class="radio">
+                  <input type="radio" name="radio" id="small" />
+                  <label for="small" class="border">Gender Enquiry</label>
+                </div>
+                <!--end radio-->
+                <div class="radio">
+                  <input type="radio" name="radio" id="large" />
+                  <label for="large" class="border">Support Request</label>
+                </div>
+                <!--end radio-->
+              </div>
+              <!--end inline-->
+              <p id="Queryerror" class="error" style="display: none">
+                Please select a query type
+              </p>
+            </div>
+
+            <div class="form-control">
+              <label for="message">Message *</label> <br />
+              <textarea
+                name="message"
+                id="message"
+                rows="6"
+                cols="75"
+              ></textarea>
+              <p id="Messageerror" class="error"></p>
+            </div>
+
+            <div class="form-control check">
+              <input type="checkbox" id="mycheck" name="checked" />
+              <label for="mycheck"
+                >I consent to being contacted by the team *</label
+              >
+            </div>
+            <p id="Checkerror" class="error" style="display: none">
+              To submit this form,please consent to being contacted
+            </p>
+          </div>
+          <!--end input-group-->
+
+          <button type="submit" id="btn">Submit</button>
+        </form>
+      </div>
+      <!--end form-box-->
+    </div>
+    <!--end form-container-->
+
+    <script src="index.js"></script>
+  </body>
+</html>
